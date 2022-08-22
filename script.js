@@ -19,8 +19,6 @@ const closeModal = function () {
   overlay.classList.add('hidden');
 };
 
-// for (let i = 0; i < btnsOpenModal.length; i++)
-//   btnsOpenModal[i].addEventListener('click', openModal);
 
 btnsOpenModal.forEach((btn)=>{
   btn.addEventListener("click",openModal);
@@ -38,6 +36,23 @@ document.addEventListener('keydown', function (e) {
 
 
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
+//
 
+
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1 = document.querySelector("#section--1");
+
+btnScrollTo.addEventListener("click",function(e){
+  
+  // const cords = section1.getBoundingClientRect();
+  // window.scrollTo({
+  //   left: cords.left + window.pageXOffset,
+  //   top: cords.top + window.pageYOffset,
+  //   behavior: "smooth",
+
+  // });
+
+
+  section1.scrollIntoView({behavior: "smooth"})
+
+});
