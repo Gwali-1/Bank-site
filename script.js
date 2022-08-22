@@ -12,7 +12,7 @@ const section1 = document.querySelector("#section--1");
 const tabs = document.querySelectorAll(".operations__tab");
 const tabsContainer = document.querySelector(".operations__tab-container");
 const tabsContent = document.querySelectorAll(".operations__content");
-
+const nav = document.querySelector(".nav");
 
 
 
@@ -131,10 +131,7 @@ const hoverFunc = function (e){
 }
 
 
-const nav = document.querySelector(".nav");
-
 nav.addEventListener("mouseover",hoverFunc.bind(0.5));
-
 nav.addEventListener("mouseout",hoverFunc.bind(1));
 
 
