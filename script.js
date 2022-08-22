@@ -73,42 +73,33 @@ document.querySelector(".nav__links").addEventListener("click",function (e){
 
 
 
+//tapped component
+
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabsContent = document.querySelectorAll(".operations__content");
 
 
 
 
 
+tabsContainer.addEventListener("click",function(e){
+  // console.log(e.target);
+  const clicked = e.target.closest(".operations__tab");
 
+  //Guard clause
+  if(!clicked) return;
 
+  //tab
+  tabs.forEach(ele => ele.classList.remove("operations__tab--active"));
+  clicked.classList.add("operations__tab--active");
+  
 
-// const randomInt = (min,max) =>{
-//   return Math.floor(Math.random() * (max - min + 1) + min)
-// }
+  //content 
+  tabsContent.forEach(ele => ele.classList.remove("operations__content--active"));
+console.log
+  document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList
+  .add("operations__content--active");
 
-// const randomColor = ()=> `rgb(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0,255)})`;
+})
 
-// console.log(randomColor);;
-
-// document.querySelector(".nav__link").addEventListener("click",function(e){
-//   this.style.color = randomColor();
-//   console.log("link",e.target,e.currentTarget);
-//   // e.stopPropagation();
-// });
-
-
-
-// document.querySelector(".nav__links").addEventListener("click",function(e){
-//   this.style.backgroundColor = randomColor()
-//   console.log("link",e.target,e.currentTarget)
-// },true);
-
-
-
-// document.querySelector(".nav").addEventListener("click",function(e){
-//   this.style.backgroundColor = randomColor()
-//   console.log("link",e.target,e.currentTarget)
-// });
-
-// // setInterval(() => {
-// //   document.querySelector(".nav").style.backgroundColor = randomColor()
-// // }, 2000);
