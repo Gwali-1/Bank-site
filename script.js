@@ -138,9 +138,8 @@ nav.addEventListener("mouseout",hoverFunc.bind(1));
 
 //sticky nav
 
-
 const navHeight = nav.getBoundingClientRect().height
-console.log(navHeight);
+
 const sticky = function (entries){
   const [entry] = entries;
   if(!entry.isIntersecting){
@@ -153,7 +152,7 @@ const sticky = function (entries){
 const options = {
   root: null,
   threshold: 0,
-  rootMargin: `-${navHeight}px`
+  rootMargin: `${navHeight}px`
 }
 
 const header = document.querySelector(".header");
