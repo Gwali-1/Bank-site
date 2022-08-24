@@ -268,3 +268,13 @@ const previousSlide = function (){
 
 }
 btnLeft.addEventListener("click", previousSlide);
+
+
+
+
+
+// window.addEventListener("beforeunload",function (e){
+//   e.preventDefault();
+//   console.log(e)
+//   e.returnValue = ''
+// })
